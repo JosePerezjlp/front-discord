@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Upateco</title>
+    <link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
     <header>
@@ -13,19 +14,40 @@
         <div>
             <div>
             <img src="#"/>
-            <p>nombre : </p>
+            <p>nombre de usuario : </p>
             </div>
-            <form>
-                <label></label>
-              <input/>
-              <input/>
-              <input/>
-              <input/>
-              <input/>
-              <input/>       
-
+            <form id="formUpdate">
+                <label>Correo electronico</label>
+              <input type="text" name="email" id="email"/>
+                <label>Nacionalidad</label>
+              <input type="text" name="country" id="country"/>
+              <label>Telefono</label>
+              <input type="tel" name="phone" id="phone"/>
+              <label>Fecha de nacimiento</label>
+              <input type="date" name="birthdate" id="birthdate"/>  
+                <button type="submit">Guardar cambios</button>
             </form>
+            <button id="mostrarModal">Cambiar contraseña</button>
+
+            <div id="miModal" class="modal">
+                <div class="modal-contenido">
+                    <span id="cerrarModal" class="cerrar">&times;</span>
+                    <form id="passwordForm">
+                        <label>Contraseña actual</label>
+                      <input type="password" id="password"/>
+                      <div id="pwIncorrect" style="color: red;"></div>   
+                        <label>Nueva contraseña</label>
+                      <input type="password" id="passwordNew"/>
+                      <label>Confirmar contraseña</label>
+                      <input type="password" id="passwordConfirm"/>
+                      <div id="mensajeError" style="color: red;"></div>       
+                       <button type="submit">Enviar cambios</button> 
+                       <div id="pwChange" style="color: rgb(0, 255, 55);"></div>  
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
+    <script src="../scripts/profile.js"></script>
 </body>
 </html>
