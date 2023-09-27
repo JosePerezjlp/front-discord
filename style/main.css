@@ -242,3 +242,11 @@ body{
 #dataServ{
     border:1px solid black
 }
+#botonesContainer{
+    display: flex;
+    flex-direction: column;
+}
+#botonesContainer button{
+    background-color: transparent;
+}
+/* fin estilos servidores*/

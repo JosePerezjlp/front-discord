@@ -11,6 +11,7 @@ formulario.addEventListener("submit", (e) => {
     const phone = document.getElementById("phone").value;
     const birthdate = document.getElementById("birthdate").value;
     const msjError = document.getElementById('msjError')
+    
     fetch("http://127.0.0.1:5000/auth/register", {
         method: "POST",
         body: JSON.stringify({ 

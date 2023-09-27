@@ -24,7 +24,8 @@ formulario.addEventListener("submit",(e)=>{
         }
        if (data.message ==='Sesion iniciada'){
         localStorage.setItem("userData", JSON.stringify(data.data));
-        window.location.href = "http://127.0.0.1:5500/template/profile.html"
+        window.location.href = "http://127.0.0.1:5500/template/servidores.html"
+        
     }
       })
       .catch(error => {
