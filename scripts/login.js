@@ -7,7 +7,7 @@ formulario.addEventListener("submit",(e)=>{
     e.preventDefault()
     const usernameInput = document.getElementById('username').value;
     const passwordInput = document.getElementById('password').value
-    let mensajeErrorElement = document.getElementById('mensajeError');
+    let mensajeErrorElement = document.getElementById('mensajeErrorLg');
     fetch("http://127.0.0.1:5000/auth/login", {
         method: "POST",
         body: JSON.stringify({ username:usernameInput,password_username:passwordInput }), 

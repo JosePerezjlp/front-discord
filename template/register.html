@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css">
     <title>Discord Upateco</title>
 </head>
-<body>
+<body class="gradient-background">
     <header>
-        <h1>Bienvenidos discord a Upateco</h1>
+        <div id="textoRegister"><h1>Bienvenidos discord Upateco</h1></div>
+        
     </header>
     <main>
-        <form id="formulario">
-            <label>Username</label>
-            <input type="text" name="username" id="username" />
-            <label>Contraseña</label>
-            <input type="password" id="password"/>
-            <label>email</label>
+        <div id="contReg">
+           <form id="formulario">
+            <label id="labelReg">Username</label>
+            <input type="text" name="username" id="usernameReg" />
+            <label id="labelReg">Contraseña</label>
+            <input type="password" id="passwordReg"/>
+            <label id="labelReg">email</label>
             <input type="text" name="email" id="email" />
-            <label>Country</label>
+            <label id="labelReg">Country</label>
             <input type="text" name="country" id="country"/>
-            <label>Phone</label>
+            <label id="labelReg">Phone</label>
             <input type="text" name="phone" id="phone" />
-            <label>Birthdate</label>
-            <input type="text" name="birthdate" id="birthdate" placeholder="AAAA-MM-DD"/>
-            <button type="submit">Ingresar</button>
+            <label id="labelReg">Birthdate</label>
+            <input type="date" name="birthdate" id="birthdate" placeholder="AAAA-MM-DD"/>
+            <button type="submit" id="btnReg">Ingresar</button>
+            <div id="msjError" style="color: red;"></div>     
         </form>
+
+        </div>
+        
     </main>
    <script src="../scripts/register.js" ></script>
 </body>

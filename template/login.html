@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css">
     <title>Discord Upateco</title>
 </head>
-<body>
+<body class="gradient-background">
     <header>
-        <h1>Bienvenidos discord a Upateco</h1>
+        <div id="bievenidaLogin"><h1 >Bienvenidos discord Upateco</h1></div>
+        
     </header>
     <main>
+        <div id="contenedorLogin">
         <form id="formulario">
-            <label>Username</label>
+            <label id="labelLogin">Username</label>
             <input type="text" name="username" id="username" />
-            <label>Contraseña</label>
-            <input type="password" id="password"/>
-            <button type="submit">Ingresar</button>
-            <div id="mensajeError" style="color: red;"></div>  
+            <label id="labelLogin">Contraseña</label>
+            <input type="password" name="password" id="password"/>
+            <button type="submit" id="btnLogin">Ingresar</button>
+            <div id="mensajeErrorLg" style="color: red;"></div>  
         </form>
+    </div>
     </main>
    <script src="../scripts/login.js" ></script>
 </body>

@@ -6,15 +6,19 @@
     <title>Discord Upateco</title>
     <link rel="stylesheet" href="../style/main.css">
 </head>
-<body>
+<body class="gradient-background">
     <header>
-        <h1>Mi Perfil</h1>
+        <div id="textoPerfil">
+            <h1>Mi Perfil</h1>
+            <button id="btnLogout">Cerrar Sesión</button>
+        </div>
+        
     </header>
-    <main>
-        <div>
-            <div>
+    <main id="mainProf">
+        <div id="contenedorMainProf">
+            <div id="contOneProf">
             <img src="#"/>
-            <p>nombre de usuario : </p>
+            <p>nombre de usuario : <span id="dataUser"></span> </p>
             </div>
             <form id="formUpdate">
                 <label>Correo electronico</label>
@@ -25,7 +29,7 @@
               <input type="tel" name="phone" id="phone"/>
               <label>Fecha de nacimiento</label>
               <input type="date" name="birthdate" id="birthdate"/>  
-                <button type="submit">Guardar cambios</button>
+                <button type="submit" id="btnUpdate">Guardar cambios</button>
             </form>
             <button id="mostrarModal">Cambiar contraseña</button>
 
@@ -33,18 +37,21 @@
                 <div class="modal-contenido">
                     <span id="cerrarModal" class="cerrar">&times;</span>
                     <form id="passwordForm">
-                        <label>Contraseña actual</label>
+                        <label  id="labelProf">Contraseña actual</label>
                       <input type="password" id="password"/>
                       <div id="pwIncorrect" style="color: red;"></div>   
-                        <label>Nueva contraseña</label>
+                        <label id="labelProf">Nueva contraseña</label>
                       <input type="password" id="passwordNew"/>
-                      <label>Confirmar contraseña</label>
+                      <label id="labelProf">Confirmar contraseña</label>
                       <input type="password" id="passwordConfirm"/>
                       <div id="mensajeError" style="color: red;"></div>       
-                       <button type="submit">Enviar cambios</button> 
+                       <button type="submit" id="btnChange">Enviar cambios</button> 
                        <div id="pwChange" style="color: rgb(0, 255, 55);"></div>  
                     </form>
                 </div>
+            </div>
+            <div>
+                <button id="btnCrear">Crear servidor</button>
             </div>
         </div>
     </main>

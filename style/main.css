@@ -1,4 +1,135 @@
+body{
+    font-family: monospace;;
+}
+    /* Define un gradiente lineal */
+.gradient-background {
+    background-image: linear-gradient(45deg, #191654, #43c6ac);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+  }
+  
+  /* Define una animación para el gradiente */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/* Estilos para login*/
+#bievenidaLogin h1{
+    text-align: center;
+}
+#contenedorLogin{
+    border:1px solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: 565px;
+    margin-top: 131px;
+    background-image: linear-gradient(45deg, #fefaf1, #32292f);
+    background-size: 200% 200%;
+    animation: gradientForm 3s ease infinite;
+    background-color: black;
+}
+#contenedorLogin form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 52px;
+    
+    
+}
+@keyframes gradientForm {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+#btnLogout{
+    position: absolute;
+    margin-top: -48px;
+    margin-left: 1268px;
+    font-family: monospace;    
+    background-color: transparent;
+}
+#btnLogin{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+}
+#labelLogin{
+    margin-bottom: -14px;
+    margin-top: 17px;
+
+}
+#username,#password{
+    margin-top: 16px;
+    height: 25px;
+}
+#email,#country,#phone,#birthdate{
+    font-family: monospace;
+    height: 25px;
+    margin-left: 20px;
+    border-color: black;
+}
+#mensajeErrorLg{
+    margin-top: 20px;
+}
+/*fin estilos login*/
+/*comienzo estilos profile*/
+#textoPerfil h1{
+    text-align: center;
+}
+#contOneProf{
+    display: flex;
+}
+#contOneProf p{
+    font-size: 20px;
+}
+#mainProf {
+    margin-top: 119px;
+}
+#contenedorMainProf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#formUpdate{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-top: 30px;
+}
+#btnUpdate{
+    width: 40%;
+    grid-column: span 2;
+    margin-left: 98px;
+    margin-top: 20px;
+    font-family: monospace;
+    height: 36px;
+    border-radius: 3px;
+}
+/*fin estilos profile*/
 /* Estilos para el modal */
+#mostrarModal{
+    margin-top: 30px;
+    font-family: monospace;
+    height: 36px;
+    border-radius: 3px;
+}
 .modal {
     display: none;
     position: fixed;
@@ -15,11 +146,99 @@
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 25%;
+    background-image: linear-gradient(45deg, #191654, #43c6ac);
+    background-size: 200% 200%;
+    animation: gradientModal 3s ease infinite;
+}
+@keyframes gradientModal {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+#passwordForm{
+    display: flex;
+    flex-direction: column;
+
+}
+#passwordNew, #passwordConfirm {
+    margin-top: 16px;
+    height: 25px;
+}
+#labelProf {
+    margin-top: 21px;
+    margin-bottom: -10px;
+}
+#btnChange {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 91px;
 }
 
-/* Estilo para el botón de cerrar */
 .cerrar {
     float: right;
     cursor: pointer;
+}
+/* fin estilos modal */
+/* comienzo estilos register */
+#textoRegister{
+    text-align: center;
+}
+#formulario{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+#contReg{
+    width: 30%;
+    margin-left: 500px;
+    margin-top:140px;
+}
+#usernameReg, #passwordReg{
+    font-family: monospace;
+    height: 25px;
+    margin-left: 20px;
+    border-color: black;
+}
+#btnReg{
+    width: 40%;
+    grid-column: span 2;
+    margin-left: 98px;
+    margin-top: 20px;
+    font-family: monospace;
+    height: 36px;
+    border-radius: 3px;
+}
+#labelReg {
+    font-size: 19px;
+}
+#msjError {
+    grid-column: span 2;
+    margin-left: 59px;
+}
+/* fin estilos register */
+/* comienzo estilos servidor */
+#contenedorServ {
+    min-height: 608px;
+}
+#contServ{
+    display: flex;    
+}
+#tresElment {
+    border: 1px solid black;
+    height: 663px;
+ 
+}
+#logServ{
+  margin-top: 500px;
+  border-top: 1px solid black;
+}
+#dataServ{
+    border:1px solid black
 }
