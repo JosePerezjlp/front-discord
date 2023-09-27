@@ -37,7 +37,7 @@ fetch('http://127.0.0.1:5000/auth/profile', {
     return response.json();
   })
   .then((data) => {
-    console.log(data)
+    
     document.getElementById('email').value = data.email;
     document.getElementById('country').value = data.country;
     document.getElementById('phone').value = data.phone;
