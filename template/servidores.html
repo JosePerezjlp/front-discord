@@ -21,14 +21,33 @@
                 <div id="botonesContainer">
                     <!-- Otro contenido -->
                   </div>
-                  <div id="informacionContainer">
+                  <div id="informacionContainer" class="menu-hidden">
                     <!-- Aquí se mostrará la información relacionada al botón clickeado -->
                   </div>
-                <div id="agregarServ"><i class="fa-solid fa-circle-plus"></i><span id="dataFetch"></span></div>
-                <div id="buscarServ">Buscar servidor</div>
+                <div id="agregarServ"><button id="btnCrear" data-tooltip="Crear server"><i class="fa-solid fa-circle-plus" ></i></button></span></div>
+                <div id="buscarServ"><button data-tooltipR="Buscar servidor"><i class="fa-solid fa-compass"></i></button></div>
                 <div id="logServ">Logueado</div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close" id="closeModal">&times;</span>
+                      <form id="passwordForm">
+                        <label  id="labelServ">Contraseña actual</label>
+                      <input type="password" id="password"/>
+                      <div id="pwIncorrect" style="color: red;"></div>   
+                        <label id="labelProf">Nueva contraseña</label>
+                      <input type="password" id="passwordNew"/>
+                      <label id="labelProf">Confirmar contraseña</label>
+                      <input type="password" id="passwordConfirm"/>
+                      <div id="mensajeError" style="color: red;"></div>       
+                       <button type="submit" id="btnChange">Enviar cambios</button> 
+                       <div id="pwChange" style="color: rgb(0, 255, 55);"></div>  
+                    </form>
+                    </div>
+                  </div>
             </div>
-            <div id="dataServ">aun note has unido a un servidor</div>
+            <div id="dataServ"><p id="textServ">Aún no te has unido a un servidor
+                Intenta buscar uno o crea uno propio</p></div>
+            
         </div>
     </main>
     <script src="https://kit.fontawesome.com/a641a5dcda.js" crossorigin="anonymous"></script>

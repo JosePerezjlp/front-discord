@@ -5,7 +5,7 @@ const btnCerrarModal = document.getElementById('cerrarModal');
 const passwordForm = document.getElementById('passwordForm');
 const mensajeError = document.getElementById('mensajeError');
 const formUpdate = document.getElementById('formUpdate')
-const btnCrear = document.getElementById('btnCrear')
+// const btnCrear = document.getElementById('btnCrear')
 const btnLogout = document.getElementById('btnLogout')
    
 let pw = ''
@@ -133,24 +133,24 @@ btnLogout.addEventListener('click',(e)=>{
         console.log(error);
     });
 })
-btnCrear.addEventListener('click',(e)=>{
-  e.preventDefault()
-  fetch("http://127.0.0.1:5000/servers/create", {
-    method: "POST",
-    body: JSON.stringify({ servername: 'educacioninit',description_server:'react.js' }),
-    headers: {
-        "Content-Type": "application/json"
-    },
-    credentials: 'include'
-})
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        if (data.message === 'Los datos del usuario riki fueron modificados con exito') {
-            pwChangeElement.textContent = 'Contraseña cambiada con éxito!';
-        }
-    })
-    .catch(error => {
-        console.log(error);
-    });
-})
+// btnCrear.addEventListener('click',(e)=>{
+//   e.preventDefault()
+//   fetch("http://127.0.0.1:5000/servers/create", {
+//     method: "POST",
+//     body: JSON.stringify({ servername: 'educacioninit',description_server:'react.js' }),
+//     headers: {
+//         "Content-Type": "application/json"
+//     },
+//     credentials: 'include'
+// })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+//         if (data.message === 'Los datos del usuario riki fueron modificados con exito') {
+//             pwChangeElement.textContent = 'Contraseña cambiada con éxito!';
+//         }
+//     })
+//     .catch(error => {
+//         console.log(error);
+//     });
+// })
