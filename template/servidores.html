@@ -30,23 +30,31 @@
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                       <span class="close" id="closeModal">&times;</span>
-                      <form id="passwordForm">
-                        <label  id="labelServ">Contraseña actual</label>
-                      <input type="password" id="password"/>
-                      <div id="pwIncorrect" style="color: red;"></div>   
-                        <label id="labelProf">Nueva contraseña</label>
-                      <input type="password" id="passwordNew"/>
-                      <label id="labelProf">Confirmar contraseña</label>
-                      <input type="password" id="passwordConfirm"/>
-                      <div id="mensajeError" style="color: red;"></div>       
-                       <button type="submit" id="btnChange">Enviar cambios</button> 
-                       <div id="pwChange" style="color: rgb(0, 255, 55);"></div>  
-                    </form>
+                        <form id="serverForm" >
+                          
+                          <label id="labelServ">Nombre del nuevo servidor</label>
+                          <input type="text" id="nServer"/>
+
+                          <label id="labelDesc">Descripcion del nuevo</label>
+                          <input type="text" id="description"/>
+                                 
+                          <button type="submit" id="btnConfirm">Confirmar</button>
+                          <button type="submit" id="btnCancel">Cancelar</button> 
+                          
+                        </form>
                     </div>
-                  </div>
+                </div> 
             </div>
             <div id="dataServ"><p id="textServ">Aún no te has unido a un servidor
-                Intenta buscar uno o crea uno propio</p></div>
+                Intenta buscar uno o crea uno propio</p>
+            </div>
+
+            <div class="message" id="msgContent">
+                <div class="contenedorMsg">
+                    <input type="text" name="msg" id="msg" placeholder="Escribe Aquí...">
+                    <button class="btnEnviar" type="button" id="btn"><i class="fa-solid fa-share"></i></button>
+                </div>
+            </div>
             
         </div>
     </main>

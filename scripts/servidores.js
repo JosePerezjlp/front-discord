@@ -6,9 +6,15 @@ const textServ = document.getElementById('textServ');
 textServ.style.display = "block"; 
 const informacionContainer = document.getElementById("informacionContainer");
 informacionContainer.style.display = "none";
+
 const valor = localStorage.getItem('userData');
 const objeto = JSON.parse(valor)
 let id_user =objeto.id_user
+
+let btnConfirm = document.getElementById("btnConfirm")
+console.log(btnConfirm)
+
+
 
   document.addEventListener("DOMContentLoaded", function() {
     const btnCrear = document.getElementById('btnCrear');
@@ -48,7 +54,7 @@ let id_user =objeto.id_user
       if(data.message === "funciona" && data.data.length > 0){
         textServ.style.display = "none";
         botonesContainer.style.display = "block";
-      data.data.forEach((elemento) => {
+        data.data.forEach((elemento) => {
       
         const boton = document.createElement("button");
         boton.textContent = elemento.creation_date;
@@ -103,8 +109,6 @@ let id_user =objeto.id_user
                     console.error('Error:', error);
                   
                   });
-                
-              
               });
              })
              informacionContainer.style.display = "flex"; 
@@ -115,14 +119,9 @@ let id_user =objeto.id_user
               console.error('Error:', error);
             
             });
-          
-        
         });
         botonesContainer.appendChild(boton)
       })
-     
-  
-      
     }else{
       botonesContainer.style.display = "none";
       dataServ.textContent = 'Aún no te has unido a un servidor Intenta buscar uno o crea uno propio'
@@ -134,17 +133,6 @@ let id_user =objeto.id_user
 
     });
   }); 
-  
-  
-
- 
-  
-  
-  
-  
-  
-  
-  
 
   btnLogout.addEventListener('click',(e)=>{
     e.preventDefault()
@@ -166,6 +154,40 @@ let id_user =objeto.id_user
           console.log(error);
       });
   })
+
+
+  let nuevoServer = () => {
+  
+    var inputServer = document.getElementById("nServer").value;
+    var inputDescription = document.getElementById("description").value;
+
+     // Obtener el valor del input
+    // var valorNameS = inputNameS.value;
+    // var valorDescriptionS = inputDescriptionS.value;
+
+    let server = {
+        name: inputServer,
+        description: inputDescription,
+    };
+    console.log(server)
+
+    fetch("http://127.0.0.1:5000/servers/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(server),
+        credentials: 'include'
+    })
+    .then(res => res.json())
+    .then(data => {
+        location.reload();
+    })
+    .catch(err => console.log(err));
+}
+
+btnConfirm.addEventListener("click", () => nuevoServer());
+console.log(btnConfirm)
  
 
 

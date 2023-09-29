@@ -228,7 +228,12 @@ body{
     min-height: 608px;
 }
 #contServ{
-    display: flex;    
+    display: flex;  
+    height: inherit;
+    min-width: 500px;
+    background-color: #fefaf1;
+    background-color: rgb(196, 216, 216);
+    position: sticky;  
 }
 #tresElment {
     border: 1px solid black;
@@ -387,4 +392,56 @@ body{
 #username, #password {
     margin-top: 16px;
     height: 25px;
+}
+
+
+
+/*Mensajes*/
+
+.message{
+   
+    width: 1170px;
+    height: 1000px;
+
+    border: 1px solid #ccc;
+
+    border-radius:  5px;
+
+    background-color: #f0f0f0;
+
+    justify-content: center ;
+    align-items: center;
+
+}
+
+.contenedorMsg{
+    display: flex;
+    align-items: center;
+    
+}
+
+#msg{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: none;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+#btn{
+    background-color: rgba(0, 0, 0, 0.5);;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+#msgContent{
+   
+    height: 7vh;
+    justify-content: flex-end;
+    margin-top: auto;
 }
